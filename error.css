@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("img/imagen6.jpeg");
+    background-size: 100%;
+    background-position: center;
+    background-attachment: scroll;
+    padding: 20px;
+    color: #000;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "header header header" "contenido contenido contenido" "footer footer footer";
+}
+
+.contenedor .fotos,
+.contenedor .contenido,
+.contenedor header,
+.contenedor .empresas,
+.contenedor .contacto {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+header {
+    width: 100%;
+    grid-area: header;
+    overflow: hidden;
+    background: #fd8a26;
+}
+
+.wrapper {
+    width: 90%;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+header .logo {
+    color: #f2f2f2;
+    font-size: 40px;
+    line-height: 100px;
+    float: left;
+    margin-left: 50px;
+}
+
+header nav {
+    float: right;
+    line-height: 100px;
+}
+
+header nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 20px;
+    font-weight: bold;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+
+header nav a:hover {
+    background: #f56F3a;
+    border-radius: 50px;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #fff;
+}
+
+.contenedor .footer {
+    color: #ccc;
+    grid-area: footer;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "header header header" "contenido contenido contenido" "footer footer footer";
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    header .logo,
+    header nav {
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        margin: auto;
+    }
+}
