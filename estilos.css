@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 90%;
+    max-width: 1500px;
+    margin: 20px auto;
+    background-image: url("img/imagen6.jpeg");
+    background-size: 100%;
+    background-position: center;
+    background-attachment: scroll;
+    color: #000;
+    font-family: sans-serif;
+}
+
+.contenedor {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas: "header header header" "fotos fotos contacto" "fotos fotos contacto" "contenido contenido contenido" "empresas empresas empresas" "footer footer footer";
+}
+
+.contenedor .header,
+.contenedor .fotos,
+.contenedor .contenido,
+.contenedor .empresas,
+.contenedor .contacto {
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.contenedor .header {
+    background: #DC7633;
+    color: #fff;
+    grid-area: header;
+}
+
+.contenedor .fotos {
+    grid-area: fotos;
+    background: #ccc;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide {
+    width: 20%;
+    transition: 2s;
+    text-align: center;
+}
+
+.slide img {
+    width: auto;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.navigation-manual {
+    position: relative;
+    width: 100%;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 2px solid #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: .70;
+    opacity: .70;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #000;
+    filter: alpha(opacity=70);
+    -moz-opacity: .70;
+    opacity: .70;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+.contenedor .contenido {
+    grid-area: contenido;
+    background: #fff;
+    height: 200px;
+}
+
+.contenedor .contacto {
+    background: #85929E;
+    min-width: 300px;
+    min-height: 100px;
+    grid-area: contacto;
+}
+
+.contenedor .contacto h3,
+.contenedor .contacto label {
+    display: inline-block;
+    padding: 15px 0;
+}
+
+.contenedor .contacto input,
+.contenedor .contacto textarea {
+    width: 100%;
+    padding: 10px 5px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    font-family: sans-serif;
+}
+
+.contenedor .contacto textarea {
+    resize: none;
+}
+
+.contenedor .contacto input[type="submit"] {
+    grid-area: boton;
+    width: 100%;
+    background: #fd8a26;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contenedor .contacto input[type="submit"]:hover {
+    background: #F39C12;
+}
+
+.contenedor .contacto #descripcion {
+    height: 100px;
+    text-align: justify;
+}
+
+.contenedor .empresas {
+    grid-area: empresas;
+    padding: 15px 20px;
+    background: #F1C40F;
+}
+
+.contenedor .footer {
+    color: #ccc;
+    grid-area: footer;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        grid-template-areas: "header header header" "contenido contenido contenido" "contacto contacto contacto" "empresas empresas empresas" "footer footer footer";
+    }
+    .contenedor .fotos {
+        display: none;
+    }
+    .contenedor .contacto {
+        background: #85929E;
+        min-height: 100px;
+        grid-area: contacto;
+    }
+}
