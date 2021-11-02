@@ -28,6 +28,7 @@ body {
 .contenedor .contenido,
 .contenedor .empresas,
 .contenedor .contacto {
+    background: #fff;
     padding: 20px;
     border-radius: 4px;
 }
