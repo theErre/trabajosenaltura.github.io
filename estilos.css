@@ -19,8 +19,8 @@ body {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, auto);
-    grid-template-areas: "header header header" "fotos fotos contacto" "fotos fotos contacto" "contenido contenido contenido" "empresas empresas empresas" "footer footer footer";
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "header header header" "fotos fotos contacto" "fotos fotos contacto" "contenido contenido contenido""footer footer footer";
 }
 
 .contenedor .header,
@@ -127,7 +127,19 @@ body {
 .contenedor .contenido {
     grid-area: contenido;
     background: #fff;
-    height: 200px;
+}
+
+.contenedor .contenido div {
+    padding: 15px 0;
+}
+
+.contenedor .contenido div h3 {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.contenedor .contenido div p {
+    text-align: justify;
 }
 
 .contenedor .contacto {
@@ -194,7 +206,7 @@ body {
 
 @media screen and (max-width: 768px) {
     .contenedor {
-        grid-template-areas: "header header header" "contenido contenido contenido" "contacto contacto contacto" "empresas empresas empresas" "footer footer footer";
+        grid-template-areas: "header header header" "contenido contenido contenido" "contacto contacto contacto" "footer footer footer";
     }
     .contenedor .fotos {
         display: none;
