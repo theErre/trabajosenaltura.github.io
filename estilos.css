@@ -4,110 +4,78 @@
 }
 
 body {
-    background-image: url("img/imagen6.jpeg");
+    /* background-image: url("img/imagen6.jpeg");
     background-size: 100%;
     background-position: center;
-    background-attachment: scroll;
-    padding: 20px;
+    background-attachment: scroll; */
+    width: 90%;
+    max-width: 1000px;
+    min-width: 300px;
+    margin: auto;
     color: #000;
     font-family: sans-serif;
-}
-
-.contenedor {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: "header header header" "fotos fotos contacto" "fotos fotos contacto" "contenido contenido contenido""footer footer footer";
-}
-
-.contenedor .fotos,
-.contenedor .contenido,
-.contenedor header,
-.contenedor .empresas,
-.contenedor .contacto {
-    padding: 20px;
-    border-radius: 4px;
+    background: #fff;
 }
 
 header {
-    width: 100%;
-    grid-area: header;
-    overflow: hidden;
-    background: #fd8a26;
-}
-
-.wrapper {
-    width: 90%;
-    max-width: 1500px;
-    margin: auto;
-    overflow: hidden;
-}
-
-header .logo {
-    color: #f2f2f2;
-    font-size: 40px;
-    line-height: 100px;
-    float: left;
-    margin-left: 50px;
+	width:100%;
 }
 
 header nav {
-    float: right;
-    line-height: 100px;
+	margin:20px auto;
+	background:#024959;
 }
 
-header nav a {
-    display: inline-block;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    line-height: normal;
-    font-size: 20px;
-    font-weight: bold;
-    -webkit-transition: all 500ms ease;
-    -o-transition: all 500ms ease;
-    transition: all 500ms ease;
+.menu_bar {
+	display:none;
 }
 
-header nav a:hover {
-    background: #f56F3a;
-    border-radius: 50px;
+header nav ul {
+	overflow:hidden;
+	list-style:none;
 }
 
-.header2 {
-    position: fixed;
-    height: 100px;
+header nav ul li {
+	float:left;
 }
 
-.header2 .logo {
-    line-height: 50px;
-    font-size: 25px;
+header nav ul li a {
+	color:#fff;
+	padding:20px;
+	display:block;
+	text-decoration:none;
 }
 
-.header2 .nav {
-    line-height: 50px;
+header nav ul li span {
+	margin-right:10px;
 }
 
-.contenedor .fotos {
-    grid-area: fotos;
-    background: #ccc;
-    margin: 0;
+header nav ul li a:hover {
+	background:#037E8C;
+}
+
+section {
+	padding:20px;
+}
+
+.fotos {
+    margin: auto;
     padding: 0;
-    width: 100%;
+    width: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .slider {
-    width: 90%;
+    width: 100%;
     height: 500px;
     border-radius: 10px;
     overflow: hidden;
 }
 
 .slides {
+    background: #fff;
     width: 500%;
     height: 500px;
     display: flex;
@@ -118,9 +86,13 @@ header nav a:hover {
 }
 
 .slide {
+    background: #fff;
     width: 20%;
     transition: 2s;
+    display: flex;
     text-align: center;
+    align-items: center;
+    justify-items: center;
 }
 
 .slide img {
@@ -175,106 +147,67 @@ header nav a:hover {
     margin-left: -60%;
 }
 
-.contenedor .contenido {
-    grid-area: contenido;
-    background: #fff;
-}
-
-.contenedor .contenido div {
-    padding: 15px 0;
-}
-
-.contenedor .contenido div h3 {
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 10px;
-}
-
-.contenedor .contenido div p {
-    text-align: justify;
-}
-
-.contenedor .contacto {
-    background: #85929E;
-    min-width: 300px;
-    min-height: 100px;
-    grid-area: contacto;
-}
-
-.contenedor .contacto h3,
-.contenedor .contacto label {
-    display: inline-block;
-    padding: 15px 0;
-}
-
-.contenedor .contacto input,
-.contenedor .contacto textarea {
-    width: 100%;
-    padding: 10px 5px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    text-transform: capitalize;
-    font-family: sans-serif;
-}
-
-.contenedor .contacto textarea {
-    resize: none;
-}
-
-.contenedor .contacto input[type="submit"] {
-    grid-area: boton;
-    width: 100%;
-    background: #fd8a26;
-    color: white;
-    padding: 14px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.contenedor .contacto input[type="submit"]:hover {
-    background: #F39C12;
-}
-
-.contenedor .contacto #descripcion {
-    height: 100px;
-    text-align: justify;
-}
-
-.contenedor .empresas {
-    grid-area: empresas;
-    padding: 15px 20px;
-    background: #F1C40F;
-}
-
-.contenedor .footer {
+footer {
     color: #ccc;
     grid-area: footer;
     text-align: center;
 }
 
-@media screen and (max-width: 768px) {
-    .contenedor {
-        grid-template-areas: "header header header" "contenido contenido contenido" "contacto contacto contacto" "footer footer footer";
+@media screen and (max-width:800px ) {
+    body {
+        width: 100%;
     }
-    .contenedor .fotos {
+
+    header {
+        position: fixed;
+        display: block;
+        margin-bottom: 50px;
+    }
+     
+	header nav {
+		width:80%;
+		height:100%;
+		left:-100%;
+		margin:0;
+		position: fixed;
+	}
+
+	header nav ul li {
+		display:block;
+		float:none;
+		border-bottom:1px solid rgba(255,255,255, .3);
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#ccc;
+	}
+
+	.menu_bar .bt-menu {
+		display:block;
+		padding:20px;
+		background:#024959;
+		color:#fff;
+		text-decoration:none;
+		font-weight: bold;
+		font-size:25px;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
+	}
+
+	.menu_bar span {
+		float:right;
+		font-size:40px;
+	}
+
+    .manual-btn {
         display: none;
     }
-    .contenedor .contacto {
-        background: #85929E;
-        min-height: 100px;
-        grid-area: contacto;
-    }
-}
 
-@media screen and (max-width: 1350px) {
-    header .logo,
-    header nav {
-        width: 100%;
-        text-align: center;
-        line-height: 50px;
+    .informacion {
+        width: 90%;
         margin: auto;
     }
 }
