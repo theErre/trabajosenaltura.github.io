@@ -156,9 +156,30 @@ header nav ul li .children li {
     margin-left: -60%;
 }
 
-.contenido {
-    margin: auto;
-    text-align: center;
+.informacion li {
+    list-style: none;
+    margin: 10px auto;
+}
+
+.informacion li label {
+    display: block;
+    color: #fff;
+    padding: 15px;
+    background: #024250;
+    border-radius: 3px;
+}
+
+#unique {
+    display: block;
+}
+
+.informacion li label:hover {
+    background: #037E8C;
+}
+
+.informacion li ul {
+    display: none;
+    margin: 15px auto;
 }
 
 footer {
