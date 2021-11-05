@@ -41,7 +41,8 @@ header nav ul li {
     position: relative;
 }
 
-header nav ul li a {
+header nav ul li a,
+header nav ul li label {
 	color:#fff;
 	padding:20px;
 	display:block;
