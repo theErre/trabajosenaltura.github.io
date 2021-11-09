@@ -173,6 +173,11 @@ header nav ul li .children li {
     display: block;
 }
 
+.contenido {
+    text-align: center;
+    margin: auto;
+}
+
 .informacion li label:hover {
     background: #037E8C;
 }
